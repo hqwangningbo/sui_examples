@@ -1,0 +1,24 @@
+{
+  "name": "sui_examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hqwangningbo/sui_examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hqwangningbo/sui_examples/issues"
+  },
+  "homepage": "https://github.com/hqwangningbo/sui_examples#readme",
+  "dependencies": {
+    "@mysten/sui.js": "^0.0.0-experimental-20230216004028"
+  }
+}
