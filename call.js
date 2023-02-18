@@ -44,4 +44,27 @@ const callPublic = async () => {
     console.log('moveCallTxn', moveCallTxn);
 }
 
-main()
+const callMint = async () => {
+    // connect to Devnet
+    const provider = new JsonRpcProvider(Network.DEVNET);
+
+    // Generate a new Keypair
+    let keypair = Ed25519Keypair.deriveKeypair(process.env.SUI_TEST_SECRET);
+    const signer = new RawSigner(keypair, provider);
+    const moveCallTxn = await signer.executeMoveCall({
+        packageObjectId: '0x7816adf1fbdbb3355fca9ff37f6046f84b61582b',
+        module: 'nb',
+        function: 'mint',
+        typeArguments: [],
+        arguments: [
+            "0x33949653654299c0f9320ad5c7c0d8eab83e1c6b",
+            "100000000000",
+            "0xe458463c0e55b96c4b386fe5ae3767228c34511e"
+        ],
+        gasBudget: 10000,
+    });
+    console.log('moveCallTxn', moveCallTxn);
+}
+
+callMint()
+
