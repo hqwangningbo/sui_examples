@@ -10,3 +10,7 @@ Cargo.lock
 **/*.rs.bk
 
 build
+
+node_modules
+
+.idea
